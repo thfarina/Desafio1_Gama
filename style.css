@@ -44,7 +44,6 @@ form{
 
 .form-title{
     text-align: center;
-    /* margin: 0 0 1em 0; */
 }
 
 .category-title h3{
@@ -59,6 +58,8 @@ hr{
 
 label{
     margin: .4em 0;
+    font-weight: bold;
+
 }
 
 .label-input{
@@ -76,7 +77,7 @@ label{
     padding: 1em 0em; 
 }
 
-input[type="text"], input[type="date"], select#estado, select#genero, select#veiculo, select#habilitacao{
+select, input{
     padding: .5em 1em;
     border-radius: .5em;
     border: 2px solid #FFFCE6;
@@ -91,6 +92,17 @@ input[type="text"], input[type="date"], select#estado, select#genero, select#vei
 
 select, input[type="date"]{
     cursor: pointer;
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1) opacity(50%);
+    cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 option{
@@ -113,10 +125,12 @@ input:hover, select#estado:hover, select#genero:hover, select#veiculo:hover, sel
     color: #fff8 ;
 }
 
-::-webkit-calendar-picker-indicator {
-    filter: invert(1);
-}
+.error{
+    font-size: small;
+    font-style: bold;
+    padding: .3em;
 
+}
 .botao{
     background-color: #A3CDD955;
     width: 100%;
@@ -135,7 +149,4 @@ input:hover, select#estado:hover, select#genero:hover, select#veiculo:hover, sel
 
 .botao:hover{
     background-color: #A3CDD9;
-    color: #111;
-    font-weight: bold;
-    text-shadow: none;
 }

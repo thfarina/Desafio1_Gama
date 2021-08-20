@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css" media="screen">
-    <script defer src="scripts.js"></script> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
@@ -74,11 +73,11 @@
                         <div class="linha">
                             <div class="label-input">
                                 <label for="cep">CEP</label>
-                                <input type="text" name="CEP" id="CEP" required>
+                                <input type="number" name="CEP" id="CEP" maxlength="8" required>
                             </div>
                             <div class="label-input">
                                 <label for="endereco">Logradouro</label>
-                                <input type="text" name="endereco" id="endereco" placeholder="ex.: Nome da rua" required>
+                                <input type="text" name="endereco" id="endereco" readonly required>
                             </div>
                             <div class="label-input">
                                 <label for="numero">Número</label>
@@ -104,21 +103,21 @@
                         <div class="linha">
                             <div class="label-input">
                                 <label for="celular">Celular</label>
-                                <input type="text" name="celular" id="celular">
+                                <input type="number" name="celular" id="celular" maxlength="11" placeholder="(00)00000-0000">
                             </div>
                             <div class="label-input">
                                 <label for="telefone1">Telefone fixo 1</label>
-                                <input type="text" name="telefone1" id="telefone1">
+                                <input type="number" name="telefone1" id="telefone1" maxlength="8">
                             </div>
                             <div class="label-input">
                                 <label for="telefone2">Telefone fixo 2</label>
-                                <input type="text" name="telefone2" id="telefone2">
+                                <input type="number" name="telefone2" id="telefone2" maxlength="8">
                             </div>
                         </div>
                         <div class="linha">
                             <div class="label-input">
                                 <label for="email">E-mail</label>
-                                <input type="text" name="email" id="email" placeholder="ex.: myname@example.com">
+                                <input type="email" name="email" id="email" placeholder="email@email.com">
                             </div>
                         </div>
                     </div>
@@ -131,11 +130,14 @@
                 <div class="linha documentos">
                     <div class="label-input">
                         <label for="identidade">Identidade</label>
-                        <input type="text" name="identidade" id="identidade" required>
+                        <input type="number" name="identidade" id="identidade" required>
                     </div>
                     <div class="label-input">
                         <label for="CPF">CPF</label>
-                        <input type="text" name="CPF" id="CPF" required>
+                        <input type="number" name="CPF" id="CPF" maxlength="11" required>
+                        <div class="error" style="display: none;">
+                            Opa! Pode conferir seu CPF?
+                        </div>
                     </div>
                     <div class="label-input">
                         <label for="veiculo">Possui veículo?</label>
@@ -163,4 +165,7 @@
 
 
 </body>
+
+<script defer src="scripts.js"></script> 
+
 </html>
