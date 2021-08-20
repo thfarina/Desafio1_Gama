@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+    <script defer src="scripts.js"></script> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
+
+    <title>Banco de Currículos - JobsNET</title>
+</head>
+<body>
+    <header>
+        <h2>JobsNET</h2>
+        <h5>Conectando oportunidades e profissionais.</h5>
+    </header>
+
+    <main class="container">
+        <div class="form-title">
+            <h1>Banco de Currículos</h1>
+            <h4>Cadastre seu currículo na nossa plataforma!</h4>
+        </div>
+
+        <form>
+            <div class="formulario">
+                <div class="category-title">
+                    <h3>DADOS PESSOAIS</h3>
+                    <hr>
+                </div>
+                <div>
+                    <div class="dados">
+                        <div class="linha">
+                            <div class="label-input">
+                                <label for="nome">Nome completo</label>
+                                <input type="text" name="nome" id="nome" required>
+                            </div>
+                            <div class="label-input">
+                                <label for="cargo">Cargo pretendido</label>
+                                <input type="text" name="cargo" id="cargo">
+                            </div>        
+                        </div>
+                        <div class="linha">
+                            <div class="label-input">
+                                <label for="nascimento">Data de nascimento</label>
+                                <input id="date" type="date" placeholder=" ">
+                            </div>
+                            <div class="label-input">
+                                <label for="estado">Estado Civil</label>
+                                <select name="estado" id="estado">
+                                    <option selected disabled value=""></option>
+                                    <option>Casada(o)</option>
+                                    <option>Solteira(o)</option>
+                                    <option>Viúva(o)</option>
+                                    <option>Divorciada(o)</option>
+                                    <option>União estável</option>
+                                </select>
+                            </div>
+                            <div class="label-input">
+                                <label for="genero">Gênero</label>
+                                <select name="genero" id="genero">
+                                    <option selected disabled value=""></option>
+                                    <option>Feminino</option>
+                                    <option>Masculino</option>
+                                    <option>Não binário</option>
+                                    <option>Outro</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="moradia">
+                        <div class="linha">
+                            <div class="label-input">
+                                <label for="cep">CEP</label>
+                                <input type="text" name="CEP" id="CEP" required>
+                            </div>
+                            <div class="label-input">
+                                <label for="endereco">Logradouro</label>
+                                <input type="text" name="endereco" id="endereco" placeholder="ex.: Nome da rua" required>
+                            </div>
+                            <div class="label-input">
+                                <label for="numero">Número</label>
+                                <input type="text" name="numero" id="numero" placeholder="ex.: 56 - Bloco 2, Apto 301" required>
+                            </div>
+                        </div>
+                        <div class="linha">
+                            <div class="label-input">
+                                <label for="bairro">Bairro</label>
+                                <input type="text" name="bairro" id="bairro" required>
+                            </div>
+                            <div class="label-input">
+                                <label for="cidade">Cidade</label>
+                                <input type="text" name="cidade" id="cidade" required>
+                            </div>
+                            <div class="label-input">
+                                <label for="estado">Estado</label>
+                                <input type="text" name="estado" id="estado" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contato">
+                        <div class="linha">
+                            <div class="label-input">
+                                <label for="celular">Celular</label>
+                                <input type="text" name="celular" id="celular">
+                            </div>
+                            <div class="label-input">
+                                <label for="telefone1">Telefone fixo 1</label>
+                                <input type="text" name="telefone1" id="telefone1">
+                            </div>
+                            <div class="label-input">
+                                <label for="telefone2">Telefone fixo 2</label>
+                                <input type="text" name="telefone2" id="telefone2">
+                            </div>
+                        </div>
+                        <div class="linha">
+                            <div class="label-input">
+                                <label for="email">E-mail</label>
+                                <input type="text" name="email" id="email" placeholder="ex.: myname@example.com">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-title">
+                    <h3>DOCUMENTOS</h3>
+                    <hr>
+                </div>
+                <div class="linha documentos">
+                    <div class="label-input">
+                        <label for="identidade">Identidade</label>
+                        <input type="text" name="identidade" id="identidade" required>
+                    </div>
+                    <div class="label-input">
+                        <label for="CPF">CPF</label>
+                        <input type="text" name="CPF" id="CPF" required>
+                    </div>
+                    <div class="label-input">
+                        <label for="veiculo">Possui veículo?</label>
+                        <select name="veiculo" id="veiculo">
+                            <option selected disabled value=""></option>
+                            <option>Sim</option>
+                            <option>Não</option>
+                        </select>
+                    </div>
+                    <div class="label-input">
+                        <label for="habilitacao">Possui habilitação?</label>
+                        <select name="habilitacao" id="habilitacao">
+                            <option selected disabled value=""></option>
+                            <option>Sim</option>
+                            <option>Não</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <button class="botao" type="submit">Enviar!</button>
+        </form>
+
+    </main>
+
+
+
+</body>
+</html>

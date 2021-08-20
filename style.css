@@ -1,0 +1,141 @@
+/* cores
+#A3CDD9 fundo hover botao
+#C2B8AD
+#506AD4 fundo botao
+#F2CC39 
+#FFFCE6
+#919191
+#FFFFFF
+#FFD432
+#110066 letra hover botao
+#90CBFB */
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: linear-gradient(90deg, #30ebee 0%, #22c1c3 20%, #035e5e 100%);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-size: 1em;
+    color: #111;
+}
+
+header{
+    padding: 1em;
+}
+
+header h5{
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.container{
+    max-width: 960px;
+    margin: auto;
+}
+
+form{
+    padding: .5em;
+}
+
+.form-title{
+    text-align: center;
+    /* margin: 0 0 1em 0; */
+}
+
+.category-title h3{
+    padding: .5em 0;
+    font-weight: 600;
+}
+
+hr{
+    background-color: #111;
+    border: .1px solid #111;
+}
+
+label{
+    margin: .4em 0;
+}
+
+.label-input{
+    display: flex;
+    flex-direction: column;
+    padding: .2em;
+    text-align: center;
+}
+
+.linha{
+    display: flex;
+}
+
+.dados, .moradia, .contato, .documentos{
+    padding: 1em 0em; 
+}
+
+input[type="text"], input[type="date"], select#estado, select#genero, select#veiculo, select#habilitacao{
+    padding: .5em 1em;
+    border-radius: .5em;
+    border: 2px solid #FFFCE6;
+    background-color: transparent;
+    color: #222;
+    outline: none;
+    font-size: medium;
+    font-family: 'Open Sans', sans-serif;
+    transition: background-color 300ms;
+    text-align: center;
+}
+
+select, input[type="date"]{
+    cursor: pointer;
+}
+
+option{
+    background-color: #A3CDD9;
+    color: #222;
+}
+
+/* FOCUS */
+input[type="text"]:focus, input[type="date"]:focus, select#estado:focus, select#genero:focus, select#veiculo:focus, select#habilitacao:focus{
+    border: 2px solid #110066;
+    background-color: #A3CDD955; 
+}
+
+/* HOVER */
+input:hover, select#estado:hover, select#genero:hover, select#veiculo:hover, select#habilitacao:hover{
+    background-color: #A3CDD955; 
+}
+
+::placeholder, input[type="date"]:empty {
+    color: #fff8 ;
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+.botao{
+    background-color: #A3CDD955;
+    width: 100%;
+    border: 2px solid #111;
+    border-radius: 0.1em 0.1em 5em 5em;
+    color: #111;
+    font-weight: bold;
+    padding: 1em;
+    display: block;
+    margin: auto;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em; 
+    transition: background-color 300ms; 
+    cursor: pointer;
+}
+
+.botao:hover{
+    background-color: #A3CDD9;
+    color: #111;
+    font-weight: bold;
+    text-shadow: none;
+}
