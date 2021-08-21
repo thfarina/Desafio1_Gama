@@ -67,6 +67,7 @@ label{
     flex-direction: column;
     padding: .2em;
     text-align: center;
+    position: relative;
 }
 
 .linha{
@@ -126,11 +127,32 @@ input:hover, select#estado:hover, select#genero:hover, select#veiculo:hover, sel
 }
 
 .error{
-    font-size: small;
-    font-style: bold;
     padding: .3em;
-
+    border-radius: 6px;
+    border: 1px solid #110066;
+    background-color: #A3CDD9;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(100%);
+    font-size: small;
+    font-weight: bold;
+    color: #110066;
 }
+
+.error:after {
+	content: '';
+	position: absolute;
+	top: 0;
+    left: .3em;
+	width: 0;
+	height: 0;
+	border: 5px solid transparent;
+	border-bottom-color: #110066;
+	border-top: 0;
+	margin-left: 5px;
+	margin-top: -5px;
+}
+
 .botao{
     background-color: #A3CDD955;
     width: 100%;
