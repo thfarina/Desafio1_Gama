@@ -30,7 +30,7 @@ header{
 
 header h5{
     font-style: italic;
-    font-weight: lighter;
+    font-weight: normal;
 }
 
 .container{
@@ -111,6 +111,11 @@ option{
     color: #222;
 }
 
+.required::after {
+    color: rgb(122, 3, 3);
+    content: " *";
+}
+
 /* FOCUS */
 input[type="text"]:focus, input[type="date"]:focus, select#estado:focus, select#genero:focus, select#veiculo:focus, select#habilitacao:focus{
     border: 2px solid #110066;
@@ -137,6 +142,8 @@ input:hover, select#estado:hover, select#genero:hover, select#veiculo:hover, sel
     font-size: small;
     font-weight: bold;
     color: #110066;
+    animation: shakeit .3s 0s ease 2;
+    transform-origin: left;
 }
 
 .error:after {
@@ -151,6 +158,12 @@ input:hover, select#estado:hover, select#genero:hover, select#veiculo:hover, sel
 	border-top: 0;
 	margin-left: 5px;
 	margin-top: -5px;
+}
+
+@keyframes shakeit {
+    0%{transform: scale(1) translateY(100%);}
+    50%{transform: scale(1.05) translateY(100%);}
+    100%{transform: scale(1) translateY(100%);}
 }
 
 .botao{

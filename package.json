@@ -1,0 +1,28 @@
+{
+  "name": "desafio1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./bin/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thfarina/Desafio1_Gama.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thfarina/Desafio1_Gama/issues"
+  },
+  "homepage": "https://github.com/thfarina/Desafio1_Gama#readme",
+  "dependencies": {
+    "debug": "^4.3.2",
+    "express": "^4.17.1",
+    "http": "0.0.1-security"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
