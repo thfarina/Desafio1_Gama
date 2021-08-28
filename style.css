@@ -17,7 +17,8 @@
 }
 
 body{
-    background: linear-gradient(90deg, #30ebee 0%, #22c1c3 20%, #035e5e 100%);
+    background: #22c1c3;
+    /* background: linear-gradient(90deg, #30ebee 0%, #22c1c3 20%, #035e5e 100%); */
     font-family: 'Open Sans', sans-serif;
     font-weight: normal;
     font-size: 1em;
@@ -117,13 +118,13 @@ option{
 }
 
 /* FOCUS */
-input[type="text"]:focus, input[type="date"]:focus, select#estado:focus, select#genero:focus, select#veiculo:focus, select#habilitacao:focus{
+input:focus, select:focus{
     border: 2px solid #110066;
     background-color: #A3CDD955; 
 }
 
 /* HOVER */
-input:hover, select#estado:hover, select#genero:hover, select#veiculo:hover, select#habilitacao:hover{
+input:hover, select:hover{
     background-color: #A3CDD955; 
 }
 

@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
 
+    <link rel="icon" href="https://s3.amazonaws.com/enlizt-resources-prod/companies/6b9bee30-b5c7-11e7-ae8e-8505028671eb_256_avatar?nocache=1508525887512">
     <title>Banco de Currículos - JobsNET</title>
 </head>
 <body>
@@ -48,7 +49,7 @@
                             </div>
                             <div class="label-input">
                                 <label for="estado">Estado Civil</label>
-                                <select name="estado" id="estado">
+                                <select name="estado" id="estadocivil">
                                     <option selected disabled value=""></option>
                                     <option>Casada(o)</option>
                                     <option>Solteira(o)</option>
@@ -77,15 +78,19 @@
                         <div class="linha">
                             <div class="label-input">
                                 <label for="cep" class="required">CEP</label>
-                                <input type="number" name="CEP" id="CEP" maxlength="11" required>
+                                <input type="text" name="CEP" id="CEP" required>
                             </div>
                             <div class="label-input">
                                 <label for="endereco" class="required">Logradouro</label>
-                                <input type="text" name="endereco" id="endereco" readonly required>
+                                <input type="text" name="endereco" id="endereco" disabled required>
                             </div>
                             <div class="label-input">
                                 <label for="numero" class="required">Número</label>
-                                <input type="text" name="numero" id="numero" placeholder="ex.: 56 - apto 301" required>
+                                <input type="text" name="numero" id="numero" placeholder="ex.: 56" required>
+                            </div>
+                            <div class="label-input">
+                                <label for="complemento" class="required">Complemento</label>
+                                <input type="text" name="complemento" id="complemento" placeholder="bloco x, apto y">
                             </div>
                         </div>
                         <div class="linha">
@@ -95,11 +100,11 @@
                             </div>
                             <div class="label-input">
                                 <label for="cidade" class="required">Cidade</label>
-                                <input type="text" name="cidade" id="cidade" required>
+                                <input type="text" name="cidade" id="cidade" disabled required>
                             </div>
                             <div class="label-input">
                                 <label for="estado" class="required">Estado</label>
-                                <input type="text" name="estado" id="estado" required>
+                                <input type="text" name="estado" id="estado" disabled required>
                             </div>
                         </div>
                     </div>
@@ -111,15 +116,11 @@
                         <div class="linha">
                             <div class="label-input">
                                 <label for="celular">Celular</label>
-                                <input type="number" name="celular" id="celular" maxlength="14" placeholder="(00)00000-0000">
+                                <input type="number" name="celular" id="celular" placeholder="(00)00000-0000">
                             </div>
                             <div class="label-input">
                                 <label for="telefone1">Telefone fixo 1</label>
-                                <input type="number" name="telefone1" id="telefone1" maxlength="9" placeholder="0000-0000">
-                            </div>
-                            <div class="label-input">
-                                <label for="telefone2">Telefone fixo 2</label>
-                                <input type="number" name="telefone2" id="telefone2" maxlength="9" placeholder="0000-0000">
+                                <input type="number" name="telefone1" id="telefone1" placeholder="0000-0000">
                             </div>
                         </div>
                         <div class="linha">
@@ -137,11 +138,11 @@
                 <div class="linha documentos">
                     <div class="label-input">
                         <label for="identidade" class="required">Identidade</label>
-                        <input type="number" name="identidade" id="identidade" required>
+                        <input type="number" name="identidade" id="identidade" placeholder="Insira somente números" required>
                     </div>
                     <div class="label-input">
                         <label for="CPF" class="required">CPF</label>
-                        <input type="number" name="CPF" id="CPF" maxlength="14" placeholder="123.456.789-09" required>
+                        <input type="number" name="CPF" id="CPF" placeholder="Insira somente números" required>
                         <div class="error"  style="display: none;">
                             Opa! Pode conferir seu CPF?
                         </div>
