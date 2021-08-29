@@ -1,11 +1,11 @@
 :root {
     --fundo: #E1EDE0;
-    --verdeclaro1: #CDE0CD;
+    --verdeclaro1: #ddfcba;
     --verdeclaro2: #B7D286;
     --verde1: #95b634;
     --verde2: #8AAD34;
     --verdeescuro1: #77942E;
-    --verdeescuro2: #3A6324;
+    --bordas: #3A6324;
     --fonte: #233b16;
 }
 
@@ -15,7 +15,6 @@
 }
 
 body{
-    /* background: linear-gradient(90deg, #035e5e 0%, #22c1c3 50%, #035e5e 100%); */
     background-color: var(--fundo);
     font-family: 'Open Sans', sans-serif;
     font-weight: normal;
@@ -33,9 +32,12 @@ header h5{
 }
 
 .container{
-    max-width: 960px;
+    max-width: 700px;
     margin: auto;
+    margin-bottom: 1em;
     padding: 1em;
+    background-color: whitesmoke;
+    border-radius: 3em;
 }
 
 form{
@@ -50,11 +52,13 @@ form{
 .category-title h3{
     padding: .5em 0;
     font-weight: 600;
+    display: flex;
+    justify-content: center;
 }
 
 hr{
-    background-color: var(--verdeescuro2);
-    border: .1px solid var(--verdeescuro2);
+    border: 0;
+    border-top: .1px solid var(--bordas);
 }
 
 label{
@@ -66,23 +70,28 @@ label{
 .label-input{
     display: flex;
     flex-direction: column;
-    padding: .2em;
+    padding: .5em .2em;
     text-align: center;
     position: relative;
 }
 
 .linha{
     display: flex;
+    justify-content: center;
 }
 
 .dados, .moradia, .contato, .documentos{
-    padding: 1em 0em; 
+    padding: 1.5em 0em; 
+}
+
+::placeholder, input[type="date"]:invalid {
+    color: var(--verdeclaro2) ;
 }
 
 select, input{
     padding: .5em 1em;
     border-radius: .5em;
-    border: 2px solid var(--verde1);
+    border: 1px solid var(--verde1);
     background-color: transparent;
     color: #222;
     outline: none;
@@ -97,8 +106,8 @@ select, input[type="date"]{
 }
 
 ::-webkit-calendar-picker-indicator {
-    filter: invert(1) opacity(50%);
     cursor: pointer;
+    filter: invert(48%);
 }
 
 input::-webkit-outer-spin-button,
@@ -119,32 +128,30 @@ option{
 
 /* FOCUS */
 input:focus, select:focus{
-    border: 2px solid var(--verdeescuro2);
+    border: 1px solid var(--bordas);
     background-color: var(--verdeclaro2); 
 }
 
 /* HOVER */
 input:hover, select:hover{
-    background-color: var(--verdeclaro2); 
+    background-color: var(--verdeclaro1); 
 }
 
-::placeholder, input[type="date"]:empty {
-    color: #fff8 ;
-}
 
 .error{
     padding: .3em;
     border-radius: 6px;
-    border: 1px solid #110066;
-    background-color: #A3CDD9;
+    border: 1px solid var(--bordas);
+    background-color: var(--fundo);
     position: absolute;
     bottom: 0;
-    transform: translateY(100%);
+    transform: translateY(90%);
     font-size: small;
     font-weight: bold;
-    color: #110066;
+    color: var(--fonte);
     animation: shakeit .3s 0s ease 2;
     transform-origin: left;
+    z-index: 10;
 }
 
 .error:after {
@@ -155,7 +162,7 @@ input:hover, select:hover{
 	width: 0;
 	height: 0;
 	border: 5px solid transparent;
-	border-bottom-color: #110066;
+	border-bottom-color: var(--bordas);
 	border-top: 0;
 	margin-left: 5px;
 	margin-top: -5px;
@@ -168,15 +175,16 @@ input:hover, select:hover{
 }
 
 .botao{
-    background-color: #A3CDD955;
+    background-color: var(--verdeclaro1);
     width: 30%;
-    border: 2px solid #05013B;
+    border: 2px solid var(--bordas);
     border-radius: 5em;
-    color: #05013B;
+    color: var(--fonte);
     font-weight: bold;
     padding: 1em;
     display: block;
     margin: auto;
+    margin-top: 1em;
     font-family: 'Open Sans', sans-serif;
     font-size: 1em; 
     transition: background-color 300ms; 
@@ -184,5 +192,5 @@ input:hover, select:hover{
 }
 
 .botao:hover{
-    background-color: #1a8f9159;
+    background-color: var(--verdeclaro2);
 }

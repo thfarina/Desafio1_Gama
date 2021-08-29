@@ -18,134 +18,136 @@
         <h5>Conectando oportunidades e profissionais.</h5>
     </header>
 
+    <div class="form-title">
+        <h1>Banco de Currículos</h1>
+        <h4>Cadastre seu currículo na nossa plataforma</h3>
+    </div>
     <main class="container">
-        <div class="form-title">
-            <h1>Banco de Currículos</h1>
-            <h4>Cadastre seu currículo na nossa plataforma!</h4>
-        </div>
         <form onsubmit="criarCandidato(event)">
-            <div class="formulario">
-                <div class="category-title">
-                    <h3>DADOS PESSOAIS</h3>
-                    <hr>
-                </div>
-                <div>
-                    <div class="dados">
-                        <div class="linha">
-                            <div class="label-input">
-                                <label for="nome" class="required">Nome completo</label>
-                                <input type="text" name="nome" id="nome" required autocomplete="on">
-                            </div>
-                            <div class="label-input">
-                                <label for="cargo" class="required">Cargo pretendido</label>
-                                <input type="text" name="cargo" id="cargo" required autocomplete="on">
-                            </div>        
+            <div class="category-title">
+                <h3>DADOS PESSOAIS</h3>
+                <hr>
+            </div>
+                <div class="dados">
+                    <div class="linha">
+                        <div class="label-input">
+                            <label for="nome" class="required">Nome completo</label>
+                            <input type="text" name="nome" id="nome" size=50 required autocomplete="on">
                         </div>
-                        <div class="linha">
-                            <div class="label-input">
-                                <label for="birth" class="required">Data de nascimento</label>
-                                <input id="birth" type="date" required autocomplete="on">
-                            </div>
-                            <div class="label-input">
-                                <label for="estado">Estado Civil</label>
-                                <select name="estado" id="estadocivil">
-                                    <option selected disabled value=""></option>
-                                    <option>Casada(o)</option>
-                                    <option>Solteira(o)</option>
-                                    <option>Viúva(o)</option>
-                                    <option>Divorciada(o)</option>
-                                    <option>União estável</option>
-                                </select>
-                            </div>
-                            <div class="label-input">
-                                <label for="genero">Gênero</label>
-                                <select name="genero" id="genero">
-                                    <option selected disabled value=""></option>
-                                    <option>Feminino</option>
-                                    <option>Masculino</option>
-                                    <option>Não binário</option>
-                                    <option>Outro</option>
-                                </select>
-                            </div>
-                        </div>
+                        <div class="label-input">
+                            <label for="cargo" class="required">Cargo pretendido</label>
+                            <input type="text" name="cargo" id="cargo" size=20 required autocomplete="on">
+                        </div>        
                     </div>
-                    <div class="category-title">
-                        <h3>ENDEREÇO</h3>
-                        <hr>
-                    </div>
-                    <div class="moradia">
-                        <div class="linha">
-                            <div class="label-input">
-                                <label for="cep" class="required">CEP</label>
-                                <input type="text" name="CEP" id="CEP" required autocomplete="on">
-                            </div>
-                            <div class="label-input">
-                                <label for="endereco" class="required">Logradouro</label>
-                                <input type="text" name="endereco" id="endereco" disabled required autocomplete="on">
-                            </div>
-                            <div class="label-input">
-                                <label for="numero" class="required">Número</label>
-                                <input type="text" name="numero" id="numero" placeholder="ex.: 56" required autocomplete="on">
-                            </div>
-                            <div class="label-input">
-                                <label for="complemento">Complemento</label>
-                                <input type="text" name="complemento" id="complemento" placeholder="bloco x, apto y">
-                            </div>
+                    <div class="linha">
+                        <div class="label-input">
+                            <label for="birth" class="required">Data de nascimento</label>
+                            <input id="birth" type="date" required autocomplete="on">
                         </div>
-                        <div class="linha">
-                            <div class="label-input">
-                                <label for="bairro" class="required">Bairro</label>
-                                <input type="text" name="bairro" id="bairro" required autocomplete="on">
-                            </div>
-                            <div class="label-input">
-                                <label for="cidade" class="required">Cidade</label>
-                                <input type="text" name="cidade" id="cidade" disabled required autocomplete="on">
-                            </div>
-                            <div class="label-input">
-                                <label for="estado" class="required">Estado</label>
-                                <input type="text" name="estado" id="estado" disabled required autocomplete="on">
-                            </div>
+                        <div class="label-input">
+                            <label for="estado">Estado Civil</label>
+                            <select name="estado" id="estadocivil">
+                                <option selected disabled value=""></option>
+                                <option>Casada(o)</option>
+                                <option>Solteira(o)</option>
+                                <option>Viúva(o)</option>
+                                <option>Divorciada(o)</option>
+                                <option>União estável</option>
+                            </select>
                         </div>
-                    </div>
-                    <div class="category-title">
-                        <h3>CONTATO</h3>
-                        <hr>
-                    </div>
-                    <div class="contato">
-                        <div class="linha">
-                            <div class="label-input">
-                                <label for="celular" class="required">Celular</label>
-                                <input type="number" name="celular" id="celular" placeholder="(00)00000-0000" required autocomplete="on">
-                            </div>
-                            <div class="label-input">
-                                <label for="telefone1">Telefone fixo</label>
-                                <input type="number" name="telefone1" id="telefone1" placeholder="0000-0000">
-                            </div>
-                        </div>
-                        <div class="linha">
-                            <div class="label-input">
-                                <label for="email" class="required">E-mail</label>
-                                <input type="email" name="email" id="email" placeholder="email@email.com" required autocomplete="on">
-                            </div>
+                        <div class="label-input">
+                            <label for="genero">Gênero</label>
+                            <select name="genero" id="genero">
+                                <option selected disabled value=""></option>
+                                <option>Feminino</option>
+                                <option>Masculino</option>
+                                <option>Não binário</option>
+                                <option>Outro</option>
+                            </select>
                         </div>
                     </div>
                 </div>
                 <div class="category-title">
-                    <h3>DOCUMENTOS</h3>
+                    <h3>ENDEREÇO</h3>
                     <hr>
                 </div>
-                <div class="linha documentos">
+                <div class="moradia">
+                    <div class="linha">
+                        <div class="label-input">
+                            <label for="cep" class="required">CEP</label>
+                            <input type="text" name="CEP" id="CEP" required autocomplete="on">
+                        </div>
+                        <div class="label-input">
+                            <label for="endereco" class="required">Logradouro</label>
+                            <input type="text" name="endereco" id="endereco" size=45 disabled required autocomplete="on">
+                        </div>
+                    </div>
+                    <div class="linha">
+                        <div class="label-input">
+                            <label for="numero" class="required">Número</label>
+                            <input type="text" name="numero" id="numero" size=10 placeholder="ex.: 56" required autocomplete="on">
+                        </div>
+                        <div class="label-input">
+                            <label for="complemento">Complemento</label>
+                            <input type="text" name="complemento" id="complemento" size=20 placeholder="bloco x, apto y">
+                        </div>
+                        <div class="label-input">
+                            <label for="bairro" class="required">Bairro</label>
+                            <input type="text" name="bairro" id="bairro" size=25 required autocomplete="on">
+                        </div>
+                    </div>
+                    <div class="linha">
+                        <div class="label-input">
+                            <label for="cidade" class="required">Cidade</label>
+                            <input type="text" name="cidade" id="cidade" size=30 disabled required autocomplete="on">
+                        </div>
+                        <div class="label-input">
+                            <label for="estado" class="required">Estado</label>
+                            <input type="text" name="estado" id="estado" disabled required autocomplete="on">
+                        </div>
+                    </div>
+                </div>
+                <div class="category-title">
+                    <h3>CONTATO</h3>
+                    <hr>
+                </div>
+                <div class="contato">
+                    <div class="linha">
+                        <div class="label-input">
+                            <label for="celular" class="required">Celular</label>
+                            <input type="number" name="celular" id="celular" placeholder="(00)00000-0000" required autocomplete="on">
+                        </div>
+                        <div class="label-input">
+                            <label for="telefone1">Telefone fixo</label>
+                            <input type="number" name="telefone1" id="telefone1" placeholder="0000-0000">
+                        </div>
+                    </div>
+                    <div class="linha">
+                        <div class="label-input">
+                            <label for="email" class="required">E-mail</label>
+                            <input type="email" name="email" id="email" placeholder="email@email.com" size=50 required autocomplete="on">
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="category-title">
+                    <h3>DOCUMENTO</h3>
+                    <hr>
+                </div>
+                <div class="linha">
                     <div class="label-input">
                         <label for="identidade" class="required">Identidade</label>
-                        <input type="number" name="identidade" id="identidade" placeholder="Insira somente números" required autocomplete="on">
+                        <input type="number" name="identidade" id="identidade" placeholder="somente números" size= 30 required autocomplete="on">
                     </div>
                     <div class="label-input">
                         <label for="CPF" class="required">CPF</label>
-                        <input type="number" name="CPF" id="CPF" placeholder="Insira somente números" required autocomplete="on">
+                        <input type="number" name="CPF" id="CPF" placeholder="somente números" size= 30 required autocomplete="on">
                         <div class="error"  style="display: none;">
                             Opa! Pode conferir seu CPF?
                         </div>
                     </div>
+                </div>
+                <div class="linha">
                     <div class="label-input">
                         <label for="veiculo">Possui veículo?</label>
                         <select name="veiculo" id="veiculo">
@@ -165,8 +167,8 @@
                     </div>
                 </div>
             </div>
-            <button class="botao" type="submit">Cadastre!</button>
-        </form>
+                <button class="botao" type="submit">Cadastre!</button>
+            </form>
 
     </main>
 
