@@ -47,7 +47,6 @@ function validacao_cpf(e) {
     let input = e.target.parentElement;
     input.querySelector('.error').style.display = 'none';
     let cpf_digitado = CPF.value;
-    console.log(cpf_digitado);
     
     let resultado_validacao = validador_cpf(cpf_digitado);
     
@@ -95,14 +94,11 @@ else {
 
 CEP.addEventListener('blur', (e) => pesquisacep(e))
 
-
 function pesquisacep(e) {
-    console.log(e);
+
     let valor = e.target.value;
-    console.log(valor);
     //Nova variável "cep" somente com dígitos.
     let cep = valor.replace(/\D/g, '');
-    console.log(cep);
     //Verifica se campo cep possui valor informado.
     if (cep != "") {
 
@@ -139,3 +135,54 @@ function pesquisacep(e) {
         limpa_formulário_cep();
     }
     };
+
+
+const Formulario = () => {
+    let form = {
+
+        nome: document.getElementById('nome').value,
+        cargo: document.getElementById('cargo').value,
+        birth: document.getElementById('birth').value,
+        estadocivil: document.getElementById('estadocivil').value,
+        genero: document.getElementById('genero').value,
+        CEP: document.getElementById('CEP').value,
+        endereco: document.getElementById('endereco').value,
+        numero: document.getElementById('numero').value,
+        complemento: document.getElementById('complemento').value,
+        bairro: document.getElementById('bairro').value,
+        cidade: document.getElementById('cidade').value,
+        estado: document.getElementById('estado').value,
+        celular: document.getElementById('celular').value,
+        telefone1: document.getElementById('telefone1').value,
+        email: document.getElementById('email').value,
+        identidade: document.getElementById('identidade').value,
+        CPF: document.getElementById('CPF').value,
+        veiculo: document.getElementById('veiculo').value,
+        habilitacao: document.getElementById('habilitacao').value,
+
+    };
+    console.log(form);
+    return form
+}
+
+const criarCandidato = async (e) => {
+    e.preventDefault();
+    fetch('http://localhost:3000/form', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-type': 'application/json'
+        },
+        body: JSON.stringify(Formulario())
+      }).then((response) => {
+
+          console.log('deu certo');
+
+      }, (response) => {
+
+        console.log('deu ruim');
+        
+      }).catch((error) => {
+          console.log(error);
+      });
+  }
