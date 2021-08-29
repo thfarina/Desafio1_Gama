@@ -167,7 +167,7 @@ const Formulario = () => {
 
 const criarCandidato = async (e) => {
     e.preventDefault();
-    fetch('http://localhost:3000/form', {
+    fetch('https://jobsnet-back.herokuapp.com/form', {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
