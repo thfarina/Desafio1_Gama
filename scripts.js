@@ -170,19 +170,23 @@ const criarCandidato = async (e) => {
     fetch('http://localhost:3000/form', {
         method: 'POST',
         headers: {
-          'Accept': 'application/json',
-          'Content-type': 'application/json'
+            'Accept': 'application/json',
+            'Content-type': 'application/json'
         },
         body: JSON.stringify(Formulario())
-      }).then((response) => {
+        }).then((response) => {
+            if (response.status == 201) {
+                response.json().then((response) => {
+                    alert(response.message)
+                })
+            }
+            if (response.status >= 400) {
+                response.json().then((response) => {
+                    alert(response.message)
+                })
+            }
 
-          console.log('deu certo');
-
-      }, (response) => {
-
-        console.log('deu ruim');
-        
-      }).catch((error) => {
-          console.log(error);
-      });
-  }
+        }).catch((error) => {
+            console.log(error);
+    });
+}
