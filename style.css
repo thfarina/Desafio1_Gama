@@ -17,12 +17,12 @@
 }
 
 body{
-    background: #cfe9e9;
+    background: #4bcece;
     /* background: linear-gradient(90deg, #30ebee 0%, #22c1c3 20%, #035e5e 100%); */
     font-family: 'Open Sans', sans-serif;
     font-weight: normal;
     font-size: 1em;
-    color: #111;
+    color: #05013B;
 }
 
 header{
@@ -53,8 +53,8 @@ form{
 }
 
 hr{
-    background-color: #111;
-    border: .1px solid #111;
+    background-color: #05013B;
+    border: .1px solid #05013B;
 }
 
 label{
@@ -170,9 +170,9 @@ input:hover, select:hover{
 .botao{
     background-color: #A3CDD955;
     width: 100%;
-    border: 2px solid #111;
+    border: 2px solid #05013B;
     border-radius: 0.1em 0.1em 5em 5em;
-    color: #111;
+    color: #05013B;
     font-weight: bold;
     padding: 1em;
     display: block;
